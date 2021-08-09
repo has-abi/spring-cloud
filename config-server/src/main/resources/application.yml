@@ -1,0 +1,12 @@
+server.port: 8881
+spring:
+  application:
+    name: CONFIG-SERVICE
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/has-abi/ms-config
+          clone-on-start: true

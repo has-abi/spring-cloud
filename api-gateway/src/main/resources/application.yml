@@ -1,0 +1,27 @@
+server:
+  port: 9191
+
+        
+spring:
+  application:
+    name: API-GATEWAY 
+  cloud:
+    gateway:
+      routes:
+      - id: COMMANDE-SERVICE
+        uri: lb://COMMANDE-SERVICE
+        predicates:
+          - Path=/api/commande/**          
+      - id: PRODUIT-SERVICE
+        uri: lb://PRODUIT-SERVICE
+        predicates:
+          - Path=/api/produit/** 
+        
+
+      
+      
+      
+      
+      
+      
+      
